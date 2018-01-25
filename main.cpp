@@ -82,17 +82,17 @@ public:
           host = optarg;
           break;
         }
-        
+
         case 'm': {
           mbox = optarg;
           break;
         }
-        
+
         case 'n': {
           ns = optarg;
           break;
         }
-        
+
         case 't': {
           int n = strtol(optarg, NULL, 10);
           if (n > 0 && n < 1000) nThreads = n;
@@ -398,14 +398,14 @@ extern "C" void* ThreadStats(void*) {
 }
 
 // TODO: Add seeds
-static const string mainnet_seeds[] = {"seed.intgrow.com", "seed.everybodybitcoin.org"};
+static const string mainnet_seeds[] = {""};
 static const string testnet_seeds[] = {"seed.intgrow.com", "seed.everybodybitcoin.org"};
 
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("seed.everybodybitcoin.org", 8833), true);
+    db.Add(CService("seed.intgrow.org", 8833), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
