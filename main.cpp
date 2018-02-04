@@ -405,7 +405,7 @@ static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("seed.intgrow.org", 8833), true);
+    db.Add(CService("120.79.89.106", 8833), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {
