@@ -398,15 +398,12 @@ extern "C" void* ThreadStats(void*) {
 }
 
 // TODO: Add seeds
-static const string mainnet_seeds[] = {"120.79.89.106"};
-static const string testnet_seeds[] = {};
+static const string mainnet_seeds[] = { "120.79.89.106", "" };
+static const string testnet_seeds[] = { "" };
 
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
-  // if (!fTestNet){
-  //   db.Add(CService("120.79.89.106", 8833), false);
-  // }
   do {
     for (int i=0; seeds[i] != ""; i++) {
       vector<CNetAddr> ips;
