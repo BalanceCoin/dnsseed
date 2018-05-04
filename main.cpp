@@ -398,7 +398,7 @@ extern "C" void* ThreadStats(void*) {
 }
 
 // TODO: Add seeds
-static const string mainnet_seeds[] = { "120.79.89.106", "" };
+static const string mainnet_seeds[] = { "120.79.135.145", "120.79.89.106" };
 static const string testnet_seeds[] = { "" };
 
 static const string *seeds = mainnet_seeds;
