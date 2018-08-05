@@ -397,8 +397,9 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-// TODO: Add seeds
-static const string mainnet_seeds[] = { "120.79.135.145", "120.79.89.106" };
+// Warning: The last string in the following array should be an empty string `""`,
+//          otherwise this program will crash immediately.
+static const string mainnet_seeds[] = { "120.79.89.106", "39.104.118.155", "" };
 static const string testnet_seeds[] = { "" };
 
 static const string *seeds = mainnet_seeds;
