@@ -35,7 +35,7 @@ public:
   CDnsSeedOpts() : nThreads(96), nDnsThreads(4), nPort(53), mbox(NULL), ns(NULL), host(NULL), tor(NULL), fUseTestNet(false), fWipeBan(false), fWipeIgnore(false), ipv4_proxy(NULL), ipv6_proxy(NULL) {}
 
   void ParseCommandLine(int argc, char **argv) {
-    static const char *help = "Everybody-Bitcoin-seeder\n"
+    static const char *help = "BalanceCoin-seeder\n"
                               "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p <port>]\n"
                               "\n"
                               "Options:\n"
@@ -397,9 +397,10 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
+// dnsseed.balancecoin.io
 // Warning: The last string in the following array should be an empty string `""`,
 //          otherwise this program will crash immediately.
-static const string mainnet_seeds[] = { "120.79.89.106", "39.104.118.155", "" };
+static const string mainnet_seeds[] = { "39.104.118.155", "" };
 static const string testnet_seeds[] = { "" };
 
 static const string *seeds = mainnet_seeds;

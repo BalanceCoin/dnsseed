@@ -1,7 +1,7 @@
-Everybody-Bitcoin-seeder
+BalanceCoin-seeder
 ==============
 
-Everybody-Bitcoin-seeder is a crawler for the Everybody Bitcoin network, which exposes a list
+BalanceCoin-seeder is a crawler for the Everybody Bitcoin network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
